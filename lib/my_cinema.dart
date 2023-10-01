@@ -32,7 +32,7 @@ class MyCinema extends StatelessWidget {
         ),
 
         title: const Text(
-          "Hum ni la thu 7",
+          "Cinema slide",
           style: TextStyle(
               fontSize: 25,
               fontWeight: FontWeight.bold
@@ -49,34 +49,38 @@ class MyCinema extends StatelessWidget {
         ],
       ),
       backgroundColor: Colors.white,
-      body: ListView(
-        scrollDirection: Axis.horizontal,
-        children: [
-          Container(
-            width: 400,
-            height: 300,
-            child: Image(
-                image: NetworkImage(url0),
-                fit: BoxFit.fill,
+      body: SizedBox(
+        width: double.infinity,
+        height: 300,
+        child: ListView(
+          scrollDirection: Axis.horizontal,
+          children: [
+            SizedBox(
+              width: 400,
+              height: 300,
+              child: Image(
+                  image: NetworkImage(url0),
+                  fit: BoxFit.contain,
+                ),
+            ),
+            SizedBox(
+              width: 400,
+              height: 300,
+              child: Image(
+                image: NetworkImage(url1),
+                fit: BoxFit.contain,
               ),
-          ),
-          Container(
-            child: Image(
-              image: NetworkImage(url1),
+            ),
+            SizedBox(
               width: 400,
               height: 300,
-              fit: BoxFit.fill,
+              child: Image(
+                image: NetworkImage(url2),
+                fit: BoxFit.contain,
+              ),
             ),
-          ),
-          Container(
-            child: Image(
-              image: NetworkImage(url2),
-              width: 400,
-              height: 300,
-              fit: BoxFit.fill,
-            ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }

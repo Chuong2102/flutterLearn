@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: "Arsenal vo dich !!!!",
-      home: MyGGClassRoom(),
+      home: MyCinema(),
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         fontFamily: 'Raleway'
