@@ -22,6 +22,12 @@ class _CreateState extends State<MyCinema> {
     "https://posterspy.com/wp-content/uploads/2023/04/Picsart_23-04-18_06-52-22-362.jpg"
   ];
 
+  List<String> movieNames = [
+    "PAST LIVES",
+    "ONE PIECE",
+    "GOD OF WAR"
+  ];
+
   ScrollController controller = ScrollController(initialScrollOffset: 0.0);
   late Timer timer;
   int curIndex = 0;
@@ -65,18 +71,13 @@ class _CreateState extends State<MyCinema> {
           decoration: const BoxDecoration(
               gradient: LinearGradient(
                   colors: [
-                    Colors.black,
+                    Colors.black38,
                     Colors.white54,
                     Colors.blueGrey
                   ])
           ),
         ),
-        shape: const RoundedRectangleBorder(
-            borderRadius: BorderRadius.only(
-                bottomRight: Radius.circular(20),
-                bottomLeft: Radius.circular(20)
-            )
-        ),
+
 
         title: const Text(
           "Cinema slide",
@@ -104,7 +105,7 @@ class _CreateState extends State<MyCinema> {
             decoration: const BoxDecoration(
               border: Border(
                 bottom: BorderSide(
-                  color: Colors.black54,
+                  color: Colors.white,
                   width: 1
                 )
               )
@@ -119,19 +120,33 @@ class _CreateState extends State<MyCinema> {
             margin: EdgeInsets.all(5),
             height: 450,
             decoration: const BoxDecoration(
-              color: Colors.black
+              color: Colors.white
             ),
             child: ListView.builder(
               controller: controller,
               scrollDirection: Axis.horizontal,
               itemCount: images.length,
               itemBuilder: (BuildContext context, int index){
-                return SizedBox(
-                  width: MediaQuery.of(context).size.width,
-                  child: Image(
-                    image: NetworkImage(images[index]),
-                    fit: BoxFit.contain,
-                  ),
+                return Column(
+                  children: [
+                    SizedBox(
+                      width: MediaQuery.of(context).size.width,
+                      height: 400,
+                      child: Image(
+                        image: NetworkImage(images[index]),
+                        fit: BoxFit.contain,
+                      ),
+                    ),
+                    Container(
+                      height: 50,
+                      child: Text(
+                        movieNames[index],
+                        style: TextStyle(
+                          color: Colors.black54, fontSize: 25, fontWeight: FontWeight.bold
+                        ),
+                      ),
+                    )
+                  ]
                 );
               },
             ),
@@ -151,8 +166,8 @@ class _CreateState extends State<MyCinema> {
                         color: index == curIndex ? Colors.blue : Colors.grey
                     )
                 );
-              }).toList() ,
-            )
+              }).toList(),
+            ),
           ],
         )
       ]
