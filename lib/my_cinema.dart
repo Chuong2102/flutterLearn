@@ -17,9 +17,9 @@ class _CreateState extends State<MyCinema> {
   String url2 = "https://posterspy.com/wp-content/uploads/2023/04/Picsart_23-04-18_06-52-22-362.jpg";
 
   List<String> images = [
-    "https://m.media-amazon.com/images/M/MV5BOTkzYmMxNTItZDAxNC00NGM0LWIyODMtMWYzMzRkMjIyMTE1XkEyXkFqcGdeQXVyMTAyMjQ3NzQ1._V1_FMjpg_UX1000_.jpg",
-    "https://a.storyblok.com/f/178900/1080x1350/1844ab885f/one-piece-live-action-poster.jpg/m/filters:quality(95)format(webp)",
-    "https://posterspy.com/wp-content/uploads/2023/04/Picsart_23-04-18_06-52-22-362.jpg"
+    "assets/images/ibleue_0.png",
+    "assets/images/ibleue_1.png",
+    "assets/images/ibleue_2.png"
   ];
 
   List<String> movieNames = [
