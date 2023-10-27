@@ -2,7 +2,10 @@ import 'package:flutter/material.dart';
 
 import 'my_cinema.dart';
 import 'my_classroom.dart';
+import 'my_form.dart';
 import 'my_home_page.dart';
+import 'my_insta.dart';
+import 'my_mark.dart';
 
 
 void main(){
@@ -16,7 +19,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: "Arsenal vo dich !!!!",
-      home: MyCinema(),
+      home: My_Instagram(),
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         fontFamily: 'Raleway'
