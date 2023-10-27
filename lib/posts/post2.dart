@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class Post1 extends StatefulWidget {
-  const Post1({super.key});
+class Post2 extends StatefulWidget {
+  const Post2({super.key});
 
   @override
-  State<Post1> createState() => _Post1State();
+  State<Post2> createState() => _Post2State();
 }
 
-class _Post1State extends State<Post1> {
+class _Post2State extends State<Post2> {
   List<String> images = [
     "assets/images/ibleue_1.png",
     "assets/images/ibleue_2.png"
@@ -171,15 +171,15 @@ class _Post1State extends State<Post1> {
                     const Text(
                       '1.111 lượt thích',
                       style: TextStyle(
-                        fontSize: 16,
-                        color: Colors.white
+                          fontSize: 16,
+                          color: Colors.white
                       ),
                     ),
                     const Text(
                       'Anh thít văn vở, còn em thít văn Chương',
                       style: TextStyle(
-                        fontSize: 16,
-                        color: Colors.white
+                          fontSize: 16,
+                          color: Colors.white
                       ),
                     ),
                     TextButton(
@@ -189,7 +189,7 @@ class _Post1State extends State<Post1> {
                               builder: (context) {
                                 return Container(
                                   decoration: const BoxDecoration(
-                                    color: Colors.black
+                                      color: Colors.black
                                   ),
                                   child: const Column(
                                     children: [
@@ -199,8 +199,8 @@ class _Post1State extends State<Post1> {
                                         children: [
                                           Text('Bình luận',
                                             style: TextStyle(
-                                              fontSize: 16,
-                                              color: Colors.white
+                                                fontSize: 16,
+                                                color: Colors.white
                                             ),
                                           ),
                                         ],
@@ -237,17 +237,17 @@ class _Post1State extends State<Post1> {
                                                       ],
                                                     ),
                                                     Row(
-                                                      children: [
-                                                        Text(
-                                                          'Hi !',
-                                                          style: TextStyle(
-                                                            fontSize: 12,
-                                                            fontWeight: FontWeight.bold,
-                                                            color: Colors.white,
-                                                          ),
-                                                          textAlign: TextAlign.left
-                                                          ,),
-                                                      ]
+                                                        children: [
+                                                          Text(
+                                                            'Hi !',
+                                                            style: TextStyle(
+                                                              fontSize: 12,
+                                                              fontWeight: FontWeight.bold,
+                                                              color: Colors.white,
+                                                            ),
+                                                            textAlign: TextAlign.left
+                                                            ,),
+                                                        ]
                                                     )
                                                   ],
                                                 )
@@ -352,7 +352,7 @@ class _Post1State extends State<Post1> {
                               });
                         },
                         child: const Text('Xem tất cả 3 bình luận', style: TextStyle(fontSize: 16,fontFamily: 'Nunito', color: Colors.grey))),
-                    Text('4 giờ trước', style: TextStyle(fontSize: 14,fontFamily: 'Nunito', color: Colors.grey),),
+                    Text('7 giờ trước', style: TextStyle(fontSize: 14,fontFamily: 'Nunito', color: Colors.grey),),
                   ],
                 ),
               )

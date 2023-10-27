@@ -49,17 +49,9 @@ class _CreateState extends State<MyCinema> {
     timer = Timer.periodic(const Duration(seconds: 4), (timer) {
       setState(() {
         curIndex = (curIndex + 1) % images.length; // Get index
-        moveImage();
+
       });
     });
-  }
-
-  void moveImage() {
-    controller.animateTo(
-      curIndex * MediaQuery.of(context).size.width,
-      duration: const Duration(milliseconds: 300),
-      curve: Curves.ease,
-    );
   }
 
   @override

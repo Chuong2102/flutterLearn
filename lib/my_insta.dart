@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:okay/posts/post1.dart';
+import 'package:okay/posts/post2.dart';
 
 class My_Instagram extends StatefulWidget {
   const My_Instagram({super.key});
@@ -12,6 +13,7 @@ class _My_InstagramState extends State<My_Instagram> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.black,
         appBar: AppBar(
             backgroundColor: Colors.black,
             title: const Text(
@@ -26,11 +28,22 @@ class _My_InstagramState extends State<My_Instagram> {
             actions: [
               IconButton(
                   onPressed: (){},
-                  icon: Icon(
-                    Icons.favorite,
+                  icon: const Icon(
+                    Icons.favorite_outline,
                     color: Colors.white,
-                    size: 20,
+                    size: 30,
                   )
+              ),
+              IconButton(
+                  onPressed: (){},
+                icon: ClipOval(
+                  child: Image.asset(
+                    "assets/images/messenger.png",
+                    height: 32,
+                    width: 32,
+                    fit: BoxFit.cover,
+                  ),
+                ),
               )
             ]
         ),
@@ -58,19 +71,49 @@ class _My_InstagramState extends State<My_Instagram> {
                               decoration: BoxDecoration(
                                   shape: BoxShape.circle,
                                   border: Border.all(
-                                      color: Colors.redAccent,
+                                      color: Colors.grey,
                                       width: 4.0
                                   )
                               ),
-                              child: CircleAvatar(
+                              child: const CircleAvatar(
                                 radius: 40, // Image radius
-                                backgroundImage: NetworkImage('https://mcdn.coolmate.me/image/March2023/meme-meo-cute-hai-huoc-1297_599.jpg'),
+                                backgroundImage: AssetImage('assets/images/avatar.png'),
                               ),
                             ),
                             Container(
                               height: 30,
                               width: 100,
-                              child: Text(
+                              child: const Text(
+                                "black_cat11",
+                                style: TextStyle(
+                                    color: Colors.white, fontSize: 15, fontWeight: FontWeight.normal
+                                ),
+                                textAlign: TextAlign.center,
+                              ),
+                            )
+                          ],
+                        ),
+                        Column(
+                          children: [
+                            Container(
+                              padding: EdgeInsets.all(5),
+                              margin: EdgeInsets.all(7),
+                              decoration: BoxDecoration(
+                                  shape: BoxShape.circle,
+                                  border: Border.all(
+                                      color: Colors.redAccent,
+                                      width: 4.0
+                                  )
+                              ),
+                              child: const CircleAvatar(
+                                radius: 40, // Image radius
+                                backgroundImage: AssetImage('assets/images/ibleue_1.png'),
+                              ),
+                            ),
+                            Container(
+                              height: 30,
+                              width: 100,
+                              child: const Text(
                                 "ilbleue",
                                 style: TextStyle(
                                     color: Colors.white, fontSize: 15, fontWeight: FontWeight.normal
@@ -92,16 +135,16 @@ class _My_InstagramState extends State<My_Instagram> {
                                       width: 4.0
                                   )
                               ),
-                              child: CircleAvatar(
+                              child: const CircleAvatar(
                                 radius: 40, // Image radius
-                                backgroundImage: NetworkImage('https://mcdn.coolmate.me/image/March2023/meme-meo-cute-hai-huoc-1297_599.jpg'),
+                                backgroundImage: AssetImage('assets/images/skysports-martin-odegaard-arsenal_6074824.jpg'),
                               ),
                             ),
                             Container(
                               height: 30,
                               width: 100,
-                              child: Text(
-                                "ilbleue",
+                              child: const Text(
+                                "Odegaard",
                                 style: TextStyle(
                                     color: Colors.white, fontSize: 15, fontWeight: FontWeight.normal
                                 ),
@@ -117,14 +160,12 @@ class _My_InstagramState extends State<My_Instagram> {
 
               ),
               // Posts
-              Container(
-                width: MediaQuery.of(context).size.width,
-                height: 700,
-                decoration: BoxDecoration(
-                  color: Colors.black
-                ),
-                child: Post1(),
-              )
+              Column(
+                children: [
+                  Post1(),
+                  Post2(),
+                ],
+              ),
             ],
           ),
         ),
@@ -133,25 +174,25 @@ class _My_InstagramState extends State<My_Instagram> {
           iconSize: 32,
           backgroundColor: Colors.black,
           items: [
-            BottomNavigationBarItem(
+            const BottomNavigationBarItem(
               icon: Icon(Icons.home,
                 color: Colors.white,
               ),
               label: '',
             ),
-            BottomNavigationBarItem(
+            const BottomNavigationBarItem(
               icon: Icon(Icons.search,
                 color: Colors.white,
               ),
               label: '',
             ),
-            BottomNavigationBarItem(
+            const BottomNavigationBarItem(
               icon: Icon(Icons.add_box,
                 color: Colors.white,
               ),
               label: '',
             ),
-            BottomNavigationBarItem(
+            const BottomNavigationBarItem(
               icon: Icon(Icons.favorite,
                 color: Colors.white,
               ),
