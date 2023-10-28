@@ -65,21 +65,53 @@ class _My_InstagramState extends State<My_Instagram> {
                         // List story
                         Column(
                           children: [
-                            Container(
-                              padding: EdgeInsets.all(5),
-                              margin: EdgeInsets.all(7),
-                              decoration: BoxDecoration(
-                                  shape: BoxShape.circle,
-                                  border: Border.all(
-                                      color: Colors.grey,
-                                      width: 4.0
-                                  )
-                              ),
-                              child: const CircleAvatar(
-                                radius: 40, // Image radius
-                                backgroundImage: AssetImage('assets/images/avatar.png'),
-                              ),
+                            Stack(
+                              children: [
+                                Container(
+                                  padding: EdgeInsets.all(5),
+                                  margin: EdgeInsets.all(10),
+                                  decoration: BoxDecoration(
+                                    shape: BoxShape.circle,
+                                    border: Border.all(
+                                      color: Colors.white10,
+                                      width: 2.0,
+                                    ),
+                                  ),
+                                  child: CircleAvatar(
+                                    radius: 40,
+                                    backgroundImage: AssetImage("assets/images/avatar.png"),
+                                    backgroundColor: Colors.white,
+                                  ),
+                                ),
+                                Positioned(
+                                  bottom: 15,
+                                  right: 15,
+                                  child: Container(
+                                    width: 36,
+                                    height: 36,
+                                    decoration: BoxDecoration(
+                                      shape: BoxShape.circle,
+                                      color: Colors.blue, // Màu nền xanh
+                                      border: Border.all(
+                                        color: Colors.black,
+                                        width: 5.0,
+                                      ),
+                                    ),
+                                    child: GestureDetector(
+                                      onTap: () {
+                                        // Xử lý sự kiện khi biểu tượng "Add" được nhấn
+                                      },
+                                      child: Icon(
+                                        Icons.add,
+                                        size: 24,
+                                        color: Colors.white, // Màu biểu tượng trắng
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ],
                             ),
+
                             Container(
                               height: 30,
                               width: 100,
@@ -145,6 +177,36 @@ class _My_InstagramState extends State<My_Instagram> {
                               width: 100,
                               child: const Text(
                                 "Odegaard",
+                                style: TextStyle(
+                                    color: Colors.white, fontSize: 15, fontWeight: FontWeight.normal
+                                ),
+                                textAlign: TextAlign.center,
+                              ),
+                            )
+                          ],
+                        ),
+                        Column(
+                          children: [
+                            Container(
+                              padding: EdgeInsets.all(5),
+                              margin: EdgeInsets.all(7),
+                              decoration: BoxDecoration(
+                                  shape: BoxShape.circle,
+                                  border: Border.all(
+                                      color: Colors.grey,
+                                      width: 4.0
+                                  )
+                              ),
+                              child: const CircleAvatar(
+                                radius: 40, // Image radius
+                                backgroundImage: AssetImage('assets/images/rice_3.jpg'),
+                              ),
+                            ),
+                            Container(
+                              height: 30,
+                              width: 100,
+                              child: const Text(
+                                "declan_rice",
                                 style: TextStyle(
                                     color: Colors.white, fontSize: 15, fontWeight: FontWeight.normal
                                 ),

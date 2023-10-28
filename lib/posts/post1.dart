@@ -239,7 +239,7 @@ class _Post1State extends State<Post1> {
                                                     Row(
                                                       children: [
                                                         Text(
-                                                          'Hi !',
+                                                          'Ngay nang len',
                                                           style: TextStyle(
                                                             fontSize: 12,
                                                             fontWeight: FontWeight.bold,
@@ -283,7 +283,7 @@ class _Post1State extends State<Post1> {
                                                     Row(
                                                         children: [
                                                           Text(
-                                                            'Hiiiiiiiiii',
+                                                            'Dang xinh toi!',
                                                             style: TextStyle(
                                                               fontSize: 12,
                                                               fontWeight: FontWeight.bold,

@@ -9,8 +9,8 @@ class Post2 extends StatefulWidget {
 
 class _Post2State extends State<Post2> {
   List<String> images = [
-    "assets/images/ibleue_1.png",
-    "assets/images/ibleue_2.png"
+    "assets/images/rice_0.jpg",
+    "assets/images/rice_1.jpg"
   ];
 
   ScrollController controller = ScrollController(initialScrollOffset: 0.0);
@@ -44,17 +44,17 @@ class _Post2State extends State<Post2> {
                 decoration: BoxDecoration(
                     shape: BoxShape.circle,
                     border: Border.all(
-                        color: Colors.redAccent,
+                        color: Colors.grey,
                         width: 1.0
                     )
                 ),
                 child: const CircleAvatar(
                   radius: 20, // Image radius
-                  backgroundImage: AssetImage("assets/images/ibleue_1.png"),
+                  backgroundImage: AssetImage("assets/images/rice_3.jpg"),
                 ),
               ),
               const Text(
-                "ilbleue",
+                "declan_rice",
                 style: TextStyle(
                     fontWeight: FontWeight.bold,
                     color: Colors.white
@@ -169,14 +169,14 @@ class _Post2State extends State<Post2> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     const Text(
-                      '1.111 lượt thích',
+                      '1.111.111 lượt thích',
                       style: TextStyle(
                           fontSize: 16,
                           color: Colors.white
                       ),
                     ),
                     const Text(
-                      'Anh thít văn vở, còn em thít văn Chương',
+                      'Good performance from my team today, luv <3',
                       style: TextStyle(
                           fontSize: 16,
                           color: Colors.white
@@ -239,7 +239,7 @@ class _Post2State extends State<Post2> {
                                                     Row(
                                                         children: [
                                                           Text(
-                                                            'Hi !',
+                                                            'I love u Ricee',
                                                             style: TextStyle(
                                                               fontSize: 12,
                                                               fontWeight: FontWeight.bold,
@@ -267,7 +267,7 @@ class _Post2State extends State<Post2> {
                                                     Row(
                                                       children: [
                                                         Text(
-                                                          't_linh',
+                                                          'blackcat11',
                                                           style: TextStyle(
                                                               fontSize: 12,
                                                               color: Colors.white)
@@ -283,7 +283,7 @@ class _Post2State extends State<Post2> {
                                                     Row(
                                                         children: [
                                                           Text(
-                                                            'Hiiiiiiiiii',
+                                                            'Good job my luv',
                                                             style: TextStyle(
                                                               fontSize: 12,
                                                               fontWeight: FontWeight.bold,
