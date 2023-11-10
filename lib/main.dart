@@ -6,7 +6,9 @@ import 'my_classroom.dart';
 import 'my_form.dart';
 import 'my_home_page.dart';
 import 'my_insta.dart';
+import 'my_login_insta.dart';
 import 'my_mark.dart';
+import 'my_signup_insta.dart';
 
 
 void main(){
@@ -20,7 +22,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: "Arsenal vo dich !!!!",
-      home: My_Instagram(),
+      home: MySignUpInsta(),
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         fontFamily: 'Raleway'

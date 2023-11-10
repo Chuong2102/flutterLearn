@@ -64,6 +64,10 @@ flutter:
     - assets/images/
   #   - images/a_dot_ham.jpeg
   fonts:
+    - family: Billabong
+      fonts:
+        - asset: assets/fonts/FontsFree-Net-Billabong.ttf
+          style: normal
     - family: Raleway
       fonts:
         - asset: assets/fonts/Raleway-Medium.ttf

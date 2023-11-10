@@ -16,14 +16,94 @@ class _My_InstagramState extends State<My_Instagram> {
       backgroundColor: Colors.black,
         appBar: AppBar(
             backgroundColor: Colors.black,
-            title: const Text(
-              "Instagram",
-              style: TextStyle(
-                  color: Colors.white,
-                  fontFamily: 'Dancing',
-                  fontWeight: FontWeight.bold,
-                  fontSize: 32
-              ),
+            title: Row(
+              children: [
+                Text(
+                  "Instagram",
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 32,
+                    fontFamily: 'Billabong',
+                    fontWeight: FontWeight.w500,
+                  ),
+                ),
+                PopupMenuButton<int>(
+                  icon: Row(
+                    children: [
+                      Expanded(
+                        child: Row(
+                          children: [
+                            Icon(
+                              Icons.keyboard_arrow_down_rounded,
+                              color: Colors.white,
+                              size: 32,
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                  color: Colors.black45,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(20.0), // Điều chỉnh độ cong của góc
+                  ),
+                  padding: EdgeInsets.all(5),
+                  offset: Offset(-100, 46),
+                  itemBuilder: (BuildContext context) => <PopupMenuEntry<int>>[
+                    PopupMenuItem<int>(
+                      value: 0,
+                      child: Row(
+                        children: [
+                          Text('Đang theo dõi',
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.w900
+                              )),
+                          Expanded(
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.end,
+                              children: [
+                                Icon(Icons.supervisor_account_rounded,
+                                  color: Colors.white,),
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    PopupMenuItem<int>(
+                      value: 1,
+                      child: Row(
+                        children: [
+                          Text('Yêu thích',
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 16,
+                                fontWeight: FontWeight.w900
+                            ),),
+                          Expanded(
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.end,
+                              children: [
+                                Icon(Icons.star_border,
+                                  color: Colors.white,),
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                  onSelected: (int value) {
+                    if (value == 0) {
+                      // Xử lý khi chọn Thư mục 1
+                    } else if (value == 1) {
+                      // Xử lý khi chọn Thư mục 2
+                    }
+                  },
+                )
+              ],
             ),
             actions: [
               IconButton(
@@ -254,8 +334,10 @@ class _My_InstagramState extends State<My_Instagram> {
               ),
               label: '',
             ),
-            const BottomNavigationBarItem(
-              icon: Icon(Icons.favorite,
+            BottomNavigationBarItem(
+              icon: ImageIcon(
+                AssetImage('assets/images/real.png'),
+                size: 32,
                 color: Colors.white,
               ),
               label: '',
